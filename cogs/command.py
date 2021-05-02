@@ -56,3 +56,6 @@ class command(commands.Cog):
             else:
                 self.result = ret
                 await ctx.send(f'```py\n{value}{ret}\n```')
+
+def setup(bot):
+    bot.add_cog(command(bot))
