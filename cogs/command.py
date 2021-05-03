@@ -20,6 +20,7 @@ class command(commands.Cog):
     
     #救世主evalコマンド
     @commands.command(name="eval", pass_context=True)
+    @commands.is_owner()
     async def eval_(self, ctx, *, body: str):
         env = {
             'bot': self.bot,
