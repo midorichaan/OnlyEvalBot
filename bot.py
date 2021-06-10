@@ -8,13 +8,13 @@ bot = commands.Bot(command_prefix="?", intents=discord.Intents.all())
 async def on_ready():
     try:
         bot.remove_command("help") #helpは敵。
-    except Exception as error:
-        print(f"[Error] {error}")
+    except Exception as exc:
+        print(f"[Error] {exc}")
     
     try:
         bot.load_extension("cogs.command")
-    except Exception as error:
-        print(f"[Error] cogs.command → {error}")
+    except Exception as exc:
+        print(f"[Error] cogs.command → {exc}")
     else:
         print("[System] cogs.command load")
         
